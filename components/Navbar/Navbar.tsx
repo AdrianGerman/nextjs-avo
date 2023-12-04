@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Navbar = () => {
+export default function Navbar() {
   return (
     <nav>
       <menu>
@@ -10,6 +10,4 @@ const Navbar = () => {
       </menu>
     </nav>
   );
-};
-
-export default Navbar;
+}
