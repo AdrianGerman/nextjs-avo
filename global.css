@@ -1,0 +1,14 @@
+/**
+* Este es un truco de CSS para mantener el pie de página en la parte inferior.
+* Descubra más trucos CSS modernos en:
+* https://moderncss.dev/
+*/
+#__next {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+#__next > main {
+  margin: 1rem auto 0;
+  max-width: 80ch;
+}

@@ -1,18 +1,21 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
+import { Container } from "semantic-ui-react";
+
 import Navbar from "@components/Navbar/Navbar";
+import Footer from "@components/Footer/Footer";
 
-type Props = {
-  children: React.ReactNode;
+type LayoutProps = {
+  children?: React.ReactNode;
 };
 
-const Layout: React.FC<Props> = ({ children }) => {
-  return (
-    <div>
-      <Navbar />
+const Layout = ({ children }: LayoutProps) => (
+  <>
+    <Navbar />
+    <Container as="main" text>
       {children}
-      <footer>This is the footer</footer>
-    </div>
-  );
-};
+    </Container>
+    <Footer />
+  </>
+);
 
 export default Layout;
